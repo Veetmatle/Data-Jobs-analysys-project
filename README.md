@@ -35,3 +35,35 @@ for i, job_title in enumerate(job_titles):
  - `SQL` is the most demanded skill almost for every role, which is a clear sign of importance of that skill.
  - **Data Engineers** require more specialized technical skills (AWS, Azure) compared to Data Analysts and Data Scientists who are expected to be proficient in more general data management and analysys tools.
  - Profitable **Data Scientist** skill to learn may be `R language - (44%)`, as it is easy to learn and provides several options as well.
+
+## 2. How are in-demand skills trending for Data Analysts?
+
+## Visualize Data
+```python
+sns.lineplot(data=df_plot, dashes=False, palette='tab10')
+sns.set_theme(style='ticks')
+sns.despine()
+
+plt.title('Trending Top Skills for Data Analysys in US', fontweight='bold')
+plt.ylabel('Likelihood in Job Posting', fontweight='bold', labelpad=20) 
+plt.xlabel('2023', fontweight='bold', labelpad=15)  
+plt.legend(title='Job Skills')
+
+from matplotlib.ticker import PercentFormatter
+ax = plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+plt.show()
+```
+
+### Results
+![Trending Top Skills for Data Analysts in the US](./images/Trending%20top%20skills%20for%20data%20analysts%20in%20US.png)
+
+*Line graph visualizating the trending top skills for data analysts in the US in 2023.*
+
+### Insights:
+- SQL consistently remains the top skill requested in job postings for data analysis throughout 2023, maintaining a likelihood above 55%.
+- Python follows closely as the second most sought-after skill, with a steady trend around 50% of job postings, showing some slight decrease mid-year but stabilizing towards the end of the year.
+- R has a lower likelihood, ranging between 25% to 30%, and experiences a noticeable drop between August and October, but slightly recovers towards the end of the year.
+- Tableau and Excel are the least requested skills among the five, with both hovering around 20% throughout the year, showing minimal fluctuation.
+- There seems to be more volatility in R skill demand compared to the others, suggesting changes in preferences or job requirements for this specific skill.
