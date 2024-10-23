@@ -167,11 +167,34 @@ sns.scatterplot(
     y='median_salary',
     hue='techology'
 )
+
+sns.set_theme(style='ticks')
+texts = []
+for i, txt in enumerate(df_DA_skills_high_demand.index):
+    texts.append(plt.text(df_DA_skills_high_demand['skill_percent'].iloc[i], df_DA_skills_high_demand['median_salary'].iloc[i], txt))
+
+
+adjust_text(texts, arrowprops=dict(arrowstyle='->', color='gray'))
+
+
+plt.xlabel('Percent of DA jobs', fontweight='bold', labelpad=15)
+plt.ylabel('Median Yearly Salary', fontweight='bold', labelpad=15)
+plt.title(f'Most Optimal Skills for Data Analysts in the US', fontweight='bold')
+
+
+ax = plt.gca()
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K'))
+ax.xaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+
+plt.tight_layout()
+plt.show()
 ```
 #### Results
 
 ![Most Optimal Skills for Data Analysts in the US](./images/Most%20Optimal%20Skills%20for%20Data%20Analysts.png)
 
+*Scatter plot visualizing optimal skills to learn as a DA.* 
 #### Insights:
 * Oracle and Python are among the top skills in terms of median yearly salary, reaching around $96K to $98K. These skills are highly valued, especially for cloud computing (Oracle) and programming (Python), which are essential in data analysis and data science fields.
 
@@ -187,4 +210,3 @@ sns.scatterplot(
 
 * The dominance of SQL in job postings highlights the importance of database management skills in the data analyst role. Similarly, Tableau and Power BI are widely used tools for data visualization, making them key skills for effective data communication.
 
-* Cloud computing skills, such as Oracle, command high salaries but are not as prevalent in job postings, indicating that cloud-related skills are more specialized and thus more valuable when required.
