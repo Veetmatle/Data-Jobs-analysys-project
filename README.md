@@ -114,7 +114,7 @@ plt.show()
 
 # The Analysis
 ## 3. How well do jobs and skills pay for Data (...)
-### Highest Paind & Most Demanded Skills for Data Analysts
+### Highest Paid & Most Demanded Skills for Data Analysts
 #### Visualize Data
 
 ```python
@@ -153,3 +153,38 @@ sns.barplot(data=df_DA_skills, x='median', y=df_DA_skills.index, hue='median', a
 * Traditional database systems like SQL server and tools like SAS are still highly valued, showing that while new technologies are emerging, core skills in handling databases and statistical software remain essential.
 
 * Excel, Powerpoint, and Word rank among the top 10 in-demand skills, highlighting the continued relevance of fundamental office tools for data reporting and presentation in business environments.
+
+# The Analysis
+
+## 4. What is the most optimal skill to learn for Data Analysts?
+
+#### Visualize Data
+
+```python
+sns.scatterplot(
+    data=df_plot,
+    x='skill_percent',
+    y='median_salary',
+    hue='techology'
+)
+```
+#### Results
+
+![Most Optimal Skills for Data Analysts in the US](./images/Most%20Optimal%20Skills%20for%20Data%20Analysts.png)
+
+#### Insights:
+* Oracle and Python are among the top skills in terms of median yearly salary, reaching around $96K to $98K. These skills are highly valued, especially for cloud computing (Oracle) and programming (Python), which are essential in data analysis and data science fields.
+
+* SQL Server and Tableau also command high salaries, around $92K, indicating that databases and visualization tools are critical for data analysts.
+
+* SQL stands out as the skill with the highest percent of DA jobs (about 55%), which shows how frequently it is required in the data analysis job market. Despite the high demand, the salary for SQL knowledge is around $92K, slightly lower than Oracle and Python.
+
+* Excel is also quite prevalent in about 40% of data analyst jobs, but it commands a lower salary of around $85K, suggesting that while Excel is widely used, it may not be as highly compensated compared to more specialized tools like SQL or Tableau.
+
+* Power BI, PowerPoint, and Word represent common analyst tools, with relatively lower salaries (ranging from $82K to $90K). These are more general tools often used for reporting and presentations, making them essential but not necessarily the highest-paying.
+
+* On the other hand, programming languages like Go and Python have higher salaries. This suggests that programming skills are more specialized and likely associated with more complex tasks, hence leading to higher compensation.
+
+* The dominance of SQL in job postings highlights the importance of database management skills in the data analyst role. Similarly, Tableau and Power BI are widely used tools for data visualization, making them key skills for effective data communication.
+
+* Cloud computing skills, such as Oracle, command high salaries but are not as prevalent in job postings, indicating that cloud-related skills are more specialized and thus more valuable when required.
