@@ -1,3 +1,8 @@
+# Overview
+
+This project focuses on labor market analysis for data-related positions, with a particular emphasis on data analyst roles. All the work I have done in this project serves as a practice to improve my skills in both data analysis and chart creation, data manipulation, and navigating more complex visualizations using the sns (Seaborn) library. The tools used were, of course, Python, plt, sns, pandas, and also numpy. The data was retrieved from the internet, courtesy of Mr. Luke Barousse. 
+
+
 # The Analysis - my exercise
 
 ## 1. What are the most demanded skills for the top 3 most popular data roles?
@@ -210,3 +215,10 @@ plt.show()
 
 * The dominance of SQL in job postings highlights the importance of database management skills in the data analyst role. Similarly, Tableau and Power BI are widely used tools for data visualization, making them key skills for effective data communication.
 
+# Insights and What I Learned:
+
+During this project, I learned how to more effectively visualize data and explore the relationships between various skills and their demand in the data analyst job market. The process of adjusting text labels and formatting plots using libraries like Seaborn and Matplotlib has enhanced my understanding of how to communicate data insights clearly and professionally.
+
+From the analysis, it's evident that programming languages and databases are crucial skills that are highly valued, with tools like Python and SQL leading the demand. In contrast, general tools like Excel and PowerPoint are still prevalent but command lower salaries. This highlights the importance of specialization in technical tools if one wants to maximize their earning potential in the data analyst field.
+
+Overall, this project has allowed me to hone my technical skills while also providing valuable insights into the current state of the data analyst job market.
